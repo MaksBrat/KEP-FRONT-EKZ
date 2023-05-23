@@ -47,21 +47,30 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 .mainBlock{
+    position: relative;
     padding: 20px;
-    box-shadow: 0 10px 10px 5px rgb(156, 156, 156);
+    border: 2px solid rgb(214, 214, 214);
 
     border-radius: 20px;
-    overflow: hidden;
+}
+.mainBlock::after{
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 13%;
+    width: 320px;
+    height: 40px; 
+    background: radial-gradient(circle, rgba(0,0,0,0.14627451322325802) 23%, rgba(11,10,10,0) 88%);
+    border-radius:50% 50% 50% 50% / 0% 0% 100% 100%;
+}
+
+.container{
+    position: relative;
 }
 
 .blockImage{
     height: 600px;
     width: 400px;
-
-    
-    
-
-    padding: 20pxs;
 }
 
 img{
